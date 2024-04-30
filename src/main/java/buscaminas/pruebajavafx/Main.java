@@ -21,7 +21,6 @@ public class Main extends Application {
         Image ico = new Image("file:src/main/resources/Image/logo.png");
         stage.getIcons().add(ico);
         stage.show();
-
     }
 
     public static void main(String[] args) {

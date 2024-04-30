@@ -3,7 +3,6 @@ package buscaminas.pruebajavafx.controllers;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-
 import java.awt.*;
 import java.net.URI;
 
