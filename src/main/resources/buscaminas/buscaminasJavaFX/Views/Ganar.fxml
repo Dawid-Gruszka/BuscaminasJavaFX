@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="332.0" style="-fx-background-color: #282826;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="buscaminas.pruebajavafx.controllers.GanarController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="332.0" style="-fx-background-color: #282826;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="buscaminas.buscaminasJavaFX.controllers.GanarController">
    <children>
       <Label layoutX="19.0" layoutY="27.0" text="Felicidades has Ganado!" textFill="WHITE">
          <font>
@@ -37,12 +36,13 @@
             <Font name="Roboto Bold" size="27.0" />
          </font>
       </Label>
-      <Button layoutX="148.0" layoutY="393.0" mnemonicParsing="false" text="Salir" />
+      <Button layoutX="208.0" layoutY="394.0" mnemonicParsing="false" text="Salir" />
       <TableView layoutX="54.0" layoutY="190.0" prefHeight="183.0" prefWidth="227.0">
         <columns>
           <TableColumn fx:id="tblNom" editable="false" prefWidth="115.0" text="Nombre" />
           <TableColumn fx:id="tblTiempo" editable="false" prefWidth="111.0" text="Tiempo" />
         </columns>
       </TableView>
+      <Button fx:id="bJugar" layoutX="70.0" layoutY="394.0" mnemonicParsing="false" text="Jugar de nuevo" />
    </children>
 </AnchorPane>

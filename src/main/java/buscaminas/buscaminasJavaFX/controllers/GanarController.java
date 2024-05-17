@@ -1,11 +1,22 @@
-package buscaminas.pruebajavafx.controllers;
+package buscaminas.buscaminasJavaFX.controllers;
+
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class PerderController implements Initializable {
+public class GanarController implements Initializable {
+
+    @FXML
+    private Button bJugar;
+
+    @FXML
+    private Label lblNom;
+
     @FXML
     private TableColumn<?, ?> tblNom;
 

@@ -1,9 +1,11 @@
-package buscaminas.pruebajavafx.route;
+package buscaminas.buscaminasJavaFX.route;
 
 public enum View {
-    INDEX("/buscaminas/pruebajavafx/Views/Pruebauno.fxml","Menu"),
-    MAIN("/buscaminas/pruebajavafx/Views/Buscaminas.fxml","Buscaminas"),
-    ABOUT("/buscaminas/pruebajavafx/Views/About.fxml","Acerca De");
+    INDEX("/buscaminas/buscaminasJavaFX/Views/Pruebauno.fxml","Menu"),
+    MAIN("/buscaminas/buscaminasJavaFX/Views/Buscaminas.fxml","Buscaminas"),
+    DERROTA("/buscaminas/buscaminasJavaFX/Views/Perder.fxml","Fin del Juego"),
+    VICTORIA("/buscaminas/buscaminasJavaFX/Views/Ganar.fxml","Fin del Juego"),
+    ABOUT("/buscaminas/buscaminasJavaFX/Views/About.fxml","Acerca De");
 
     private  String fileName;
     private String fxmlPath;

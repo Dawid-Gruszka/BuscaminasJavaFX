@@ -1,4 +1,4 @@
-package buscaminas.pruebajavafx.excepciones;
+package buscaminas.buscaminasJavaFX.excepciones;
 
 
 public class CasillaInvalida extends Exception{

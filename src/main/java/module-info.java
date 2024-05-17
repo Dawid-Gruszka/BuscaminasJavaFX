@@ -6,10 +6,10 @@ module buscaminas.pruebajavafx {
     requires org.kordamp.ikonli.javafx;
     requires java.desktop;
 
-    opens buscaminas.pruebajavafx to javafx.fxml;
-    exports buscaminas.pruebajavafx;
-    exports buscaminas.pruebajavafx.controllers;
-    opens buscaminas.pruebajavafx.controllers to javafx.fxml;
-    exports buscaminas.pruebajavafx.Models;
-    opens buscaminas.pruebajavafx.Models to javafx.fxml;
+    opens buscaminas.buscaminasJavaFX to javafx.fxml;
+    exports buscaminas.buscaminasJavaFX;
+    exports buscaminas.buscaminasJavaFX.controllers;
+    opens buscaminas.buscaminasJavaFX.controllers to javafx.fxml;
+    exports buscaminas.buscaminasJavaFX.Models;
+    opens buscaminas.buscaminasJavaFX.Models to javafx.fxml;
 }

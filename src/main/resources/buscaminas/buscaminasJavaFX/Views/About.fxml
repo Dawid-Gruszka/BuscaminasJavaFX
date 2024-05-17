@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="171.0" prefWidth="437.0" style="-fx-background-color: #282826;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="buscaminas.pruebajavafx.controllers.AboutController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="171.0" prefWidth="437.0" style="-fx-background-color: #282826;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="buscaminas.buscaminasJavaFX.controllers.AboutController">
    <children>
       <ImageView fx:id="imgGit" fitHeight="39.0" fitWidth="39.0" layoutX="264.0" layoutY="106.0" onMouseClicked="#github" pickOnBounds="true" preserveRatio="true">
          <image>

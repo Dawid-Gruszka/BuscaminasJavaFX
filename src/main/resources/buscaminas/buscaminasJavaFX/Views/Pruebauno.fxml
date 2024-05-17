@@ -9,7 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="402.0" maxWidth="574.0" minHeight="402.0" minWidth="574.0" prefHeight="402.0" prefWidth="574.0" style="-fx-background-color: #282826;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="buscaminas.pruebajavafx.controllers.MenuController">
+<AnchorPane maxHeight="402.0" maxWidth="574.0" minHeight="402.0" minWidth="574.0" prefHeight="402.0" prefWidth="574.0" style="-fx-background-color: #282826;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="buscaminas.buscaminasJavaFX.controllers.MenuController">
    <children>
       <Button fx:id="btnJugar" layoutX="265.0" layoutY="332.0" mnemonicParsing="false" onAction="#click" style="-fx-background-color: #f5f0ed;" text="Jugar" />
       <TextField fx:id="txtNom" layoutX="111.0" layoutY="268.0" />

@@ -1,8 +1,8 @@
-package buscaminas.pruebajavafx.controllers;
+package buscaminas.buscaminasJavaFX.controllers;
 
-import buscaminas.pruebajavafx.Models.ViewSwitcher;
-import buscaminas.pruebajavafx.Models.ViewSwitcher2;
-import buscaminas.pruebajavafx.route.View;
+import buscaminas.buscaminasJavaFX.Models.ViewSwitcher;
+import buscaminas.buscaminasJavaFX.Models.ViewSwitcher2;
+import buscaminas.buscaminasJavaFX.route.View;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -17,11 +17,10 @@ public class MenuController implements Initializable {
     @FXML
     private TextField txtNom;
     @FXML
-    private ChoiceBox<String> selector;
-    private String[] dificultad = {"Principiante","Intermedia","Experto"};
+    private  ChoiceBox<String> selector;
+    private String[] dificultad = {"Principiante","Intermedio","Experto"};
     @FXML
     private ImageView imgInformacion;
-
     @FXML
     protected void click() {
         String nombre = this.txtNom.getText();
@@ -30,7 +29,7 @@ public class MenuController implements Initializable {
             String difi = selector.getValue();
             if(!nom.isEmpty()){
                 if (difi != null){
-                    ViewSwitcher.cambiarVista(View.MAIN);
+                    ViewSwitcher.cambiarVista(View.MAIN,difi);
                 } else {
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setHeaderText(null);

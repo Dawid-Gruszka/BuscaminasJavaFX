@@ -1,5 +1,6 @@
-package buscaminas.pruebajavafx.Models;
-import buscaminas.pruebajavafx.route.View;
+package buscaminas.buscaminasJavaFX.Models;
+import buscaminas.buscaminasJavaFX.controllers.BuscaminasController;
+import buscaminas.buscaminasJavaFX.route.View;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -7,15 +8,30 @@ import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-public class ViewSwitcher2 {
+public class ViewSwitcher {
 
-    public static void cambiarVista(View view) {
+    private static Stage stage;
+
+    public static void setStage(Stage mystage) {
+        stage = mystage;
+    }
+
+    public static void cambiarVista(View view, String dificultad) {
         try {
             // Cargar la vista FXML
             FXMLLoader loader = new FXMLLoader(ViewSwitcher.class.getResource(view.getFxmlPath()));
             Parent root = loader.load();
+
+            // Obtener el controlador de la vista cargada
+            BuscaminasController controller = loader.getController();
+
+            // Pasar la dificultad al BuscaminasController
+            controller.setDificultad(dificultad);
+
+            // Ejecutar InicializarTablero() después de haber configurado la dificultad
+            controller.InicializarTablero();
+
             // Configurar la nueva escena y escenario
-            Stage stage = new Stage();
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.setTitle(view.getTitle());
