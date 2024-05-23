@@ -7,8 +7,16 @@ import javafx.scene.control.Alert;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+/**
+ * Clase para cambiar la vista en la aplicación JavaFX del juego Buscaminas.
+ */
 public class ViewSwitcher2 {
 
+    /**
+     * Cambia la vista de la aplicación JavaFX a la especificada en el parámetro "view".
+     *
+     * @param view la vista a la que se cambiará.
+     */
     public static void cambiarVista(View view) {
         try {
             // Cargar la vista FXML
@@ -19,7 +27,7 @@ public class ViewSwitcher2 {
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.setTitle(view.getTitle());
-            //Cargamos el Ico
+            // Cargar el icono de la aplicación
             Image ico = new Image("file:src/main/resources/Image/logo.png");
             stage.getIcons().add(ico);
             stage.setResizable(false);
@@ -35,5 +43,4 @@ public class ViewSwitcher2 {
             e.printStackTrace();
         }
     }
-
 }

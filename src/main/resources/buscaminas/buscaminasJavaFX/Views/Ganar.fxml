@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="332.0" style="-fx-background-color: #282826;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="buscaminas.buscaminasJavaFX.controllers.GanarController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="332.0" style="-fx-background-color: #282826;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="buscaminas.buscaminasJavaFX.controllers.GanarController">
    <children>
-      <Label layoutX="19.0" layoutY="27.0" text="Felicidades has Ganado!" textFill="WHITE">
+      <Label layoutX="19.0" layoutY="27.0" text="¡Felicidades, has ganado!" textFill="WHITE">
          <font>
             <Font name="Roboto Bold" size="27.0" />
          </font>
@@ -36,13 +36,14 @@
             <Font name="Roboto Bold" size="27.0" />
          </font>
       </Label>
-      <Button layoutX="208.0" layoutY="394.0" mnemonicParsing="false" text="Salir" />
-      <TableView layoutX="54.0" layoutY="190.0" prefHeight="183.0" prefWidth="227.0">
-        <columns>
-          <TableColumn fx:id="tblNom" editable="false" prefWidth="115.0" text="Nombre" />
-          <TableColumn fx:id="tblTiempo" editable="false" prefWidth="111.0" text="Tiempo" />
-        </columns>
+      <Button layoutX="208.0" layoutY="394.0" mnemonicParsing="false" onAction="#salir" text="Salir" />
+      <TableView fx:id="tableView" layoutX="54.0" layoutY="190.0" prefHeight="183.0" prefWidth="227.0">
+         <columns>
+            <TableColumn fx:id="tblNom" text="Nombre" prefWidth="115.0" />
+            <TableColumn fx:id="tblTiempo" text="Tiempo" prefWidth="111.0" />
+         </columns>
       </TableView>
-      <Button fx:id="bJugar" layoutX="70.0" layoutY="394.0" mnemonicParsing="false" text="Jugar de nuevo" />
+      <Button fx:id="bJugar" layoutX="70.0" layoutY="394.0" mnemonicParsing="false" onAction="#jugar" text="Jugar de nuevo" />
    </children>
 </AnchorPane>
+

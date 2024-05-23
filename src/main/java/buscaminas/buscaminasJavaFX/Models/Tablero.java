@@ -2,24 +2,50 @@ package buscaminas.buscaminasJavaFX.Models;
 
 import java.util.Random;
 
+/**
+ * Clase que representa el tablero del juego de Buscaminas.
+ * Gestiona la creación del tablero, la colocación de minas y el cálculo de minas adyacentes.
+ */
 public class Tablero {
     private static Casilla[][] casillas;
     private static int numFilas;
     private static int numColumnas;
     private static int numMinas;
 
+    /**
+     * Devuelve el número de filas del tablero.
+     *
+     * @return el número de filas.
+     */
     public static int getNumFilas() {
         return numFilas;
     }
 
+    /**
+     * Devuelve el número de columnas del tablero.
+     *
+     * @return el número de columnas.
+     */
     public static int getNumColumnas() {
         return numColumnas;
     }
 
+    /**
+     * Devuelve el número de minas en el tablero.
+     *
+     * @return el número de minas.
+     */
     public static int getNumMinas() {
         return numMinas;
     }
 
+    /**
+     * Crea el tablero de acuerdo a la dificultad especificada.
+     * Inicializa las casillas y coloca las minas aleatoriamente.
+     *
+     * @param dificultad la dificultad del juego (Principiante, Intermedio, Experto).
+     * @return una matriz bidimensional de casillas que representa el tablero.
+     */
     public static Casilla[][] crearTablero(String dificultad) {
         switch (dificultad) {
             case "Principiante":
@@ -27,12 +53,12 @@ public class Tablero {
                 numColumnas = 8;
                 break;
             case "Intermedio":
-                numFilas = 14;
-                numColumnas = 14;
+                numFilas = 10;
+                numColumnas = 10;
                 break;
             case "Experto":
-                numFilas = 16;
-                numColumnas = 16;
+                numFilas = 12;
+                numColumnas = 12;
                 break;
             default:
                 System.out.println("Error");
@@ -57,6 +83,10 @@ public class Tablero {
         return casillas;
     }
 
+    /**
+     * Coloca minas aleatoriamente en el tablero.
+     * Aproximadamente 1/6 de las casillas serán minas.
+     */
     private static void colocarMinas() {
         Random random = new Random();
         numMinas = numFilas * numColumnas / 6; // Aproximadamente 1/6 de las casillas serán minas
@@ -72,6 +102,10 @@ public class Tablero {
         }
     }
 
+    /**
+     * Calcula el número de minas adyacentes para cada casilla.
+     * Este método se ejecuta después de que las minas hayan sido colocadas.
+     */
     private static void calcularNumMinasAdyacentes() {
         int[][] direcciones = {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
 
@@ -94,6 +128,13 @@ public class Tablero {
         }
     }
 
+    /**
+     * Devuelve la casilla en la posición especificada.
+     *
+     * @param fila la fila de la casilla.
+     * @param columna la columna de la casilla.
+     * @return la casilla en la posición especificada.
+     */
     public static Casilla getCasilla(int fila, int columna) {
         return casillas[fila][columna];
     }
